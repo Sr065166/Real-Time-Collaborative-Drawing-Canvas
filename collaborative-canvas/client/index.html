@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Collaborative Canvas — Sahil Raj</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="toolbar">
+    <label>Brush <input id="tool-brush" type="radio" name="tool" checked></label>
+    <label>Eraser <input id="tool-eraser" type="radio" name="tool"></label>
+    <input id="color" type="color" value="#000000">
+    <input id="width" type="range" min="1" max="30" value="4">
+    <button id="undo">Undo</button>
+    <button id="redo">Redo</button>
+    <span id="users-online"></span>
+  </div>
+  <div id="canvas-wrap">
+    <canvas id="draw"></canvas>
+  </div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="websocket.js"></script>
+  <script src="canvas.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

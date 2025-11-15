@@ -1,0 +1,1 @@
+WS.on('userlist',d=>{document.getElementById('users-online').textContent='Online: '+d.users.map(u=>u.id).join(', ')});
